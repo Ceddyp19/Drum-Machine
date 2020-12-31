@@ -1,9 +1,10 @@
 import './App.css';
+import Display from './Display'
 
 function App() {
   return (
-    <div className="App">
- 
+    <div className="App" id="drum-machine">
+      <Display />
     </div>
   );
 }
