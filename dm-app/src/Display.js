@@ -24,32 +24,35 @@ class Display extends React.Component {
                     break;
                 case 'w':
                 case 'W':
-
+                    playSound(event.key.toUpperCase())
                     break;
                 case 'e':
                 case 'E':
+                    playSound(event.key.toUpperCase())
                     break;
                 case 'a':
                 case 'A':
+                    playSound(event.key.toUpperCase())
                     break;
                 case 's':
                 case 'S':
-
+                    playSound(event.key.toUpperCase())
                     break;
                 case 'd':
                 case 'D':
+                    playSound(event.key.toUpperCase())
                     break;
                 case 'z':
                 case 'Z':
-
+                    playSound(event.key.toUpperCase())
                     break;
                 case 'x':
                 case 'X':
-
+                    playSound(event.key.toUpperCase())
                     break;
                 case 'c':
                 case 'C':
-
+                    playSound(event.key.toUpperCase())
                     break;
                 default:
                     break;
