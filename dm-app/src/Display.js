@@ -2,9 +2,11 @@ import React from 'react';
 import DrumPad from './DrumPad'
 
 function playSound(key) {
-    console.log(key)
+    //use the key arg to find matching element via its id
     let snd = document.getElementById(key)
+    //plays sound
     snd.play();
+    //resets sound after it is played
     snd.currentTime = 0;
 }
 
@@ -12,55 +14,19 @@ class Display extends React.Component {
     state = {}
 
     componentDidMount() {
+        //listens for a key event
         document.addEventListener('keydown', function (event) {
-if (event.key.length > 1) return null 
-            if(/[qweasdzxc]/i.test(event.key)){
+            //checks length of key value pressed, if longer than one i.e. capslock button, then we know
+            //automatically that's not one of how drumpad keys and should return null 
+            if (event.key.length > 1) return null
+            //use regex to see if the key pressed is one of our drumpad keys
+            //if so we call playSoung and pass in the key pressed
+            //we uppercase the key so our code will still work capsLock is on or not
+            if (/[qweasdzxc]/i.test(event.key)) {
                 playSound(event.key.toUpperCase())
             }
-            // switch (event.key) {
-            //     case 'q':
-            //     case 'Q':
-            //         playSound(event.key.toUpperCase())
-            //         break;
-            //     case 'w':
-            //     case 'W':
-            //         playSound(event.key.toUpperCase())
-            //         break;
-            //     case 'e':
-            //     case 'E':
-            //         playSound(event.key.toUpperCase())
-            //         break;
-            //     case 'a':
-            //     case 'A':
-            //         playSound(event.key.toUpperCase())
-            //         break;
-            //     case 's':
-            //     case 'S':
-            //         playSound(event.key.toUpperCase())
-            //         break;
-            //     case 'd':
-            //     case 'D':
-            //         playSound(event.key.toUpperCase())
-            //         break;
-            //     case 'z':
-            //     case 'Z':
-            //         playSound(event.key.toUpperCase())
-            //         break;
-            //     case 'x':
-            //     case 'X':
-            //         playSound(event.key.toUpperCase())
-            //         break;
-            //     case 'c':
-            //     case 'C':
-            //         playSound(event.key.toUpperCase())
-            //         break;
-            //     default:
-            //         break;
-            // }
-
         })
     }
-
 
 
     render() {
