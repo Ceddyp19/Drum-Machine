@@ -1,21 +1,26 @@
 import React from 'react';
 import DrumPad from './DrumPad'
 
+function playSound(key) {
+    console.log(key)
+    let snd = document.getElementById(key)
+    snd.play();
+    snd.currentTime = 0;
+}
+
 class Display extends React.Component {
     state = {}
 
-
     componentDidMount() {
         document.addEventListener('keydown', function (event) {
-            console.log(typeof event.key)
 
             switch (event.key) {
                 case 'q':
                 case 'Q':
-                    this.playSound(event);
-                // let snd = document.getElementById(event.key.toUpperCase())
-                // snd.play();
-                // snd.currentTime = 0;
+                    playSound(event.key.toUpperCase())
+                    // let snd = document.getElementById(event.key.toUpperCase())
+                    // snd.play();
+                    // snd.currentTime = 0;
                     break;
                 case 'w':
                 case 'W':
@@ -29,24 +34,23 @@ class Display extends React.Component {
                     break;
                 case 's':
                 case 'S':
-                    console.log('s')
+
                     break;
                 case 'd':
                 case 'D':
                     break;
                 case 'z':
                 case 'Z':
-                    console.log('z')
+
                     break;
                 case 'x':
                 case 'X':
-                    console.log('z')
+
                     break;
                 case 'c':
                 case 'C':
-                    console.log('z')
-                    break;
 
+                    break;
                 default:
                     break;
             }
@@ -57,12 +61,6 @@ class Display extends React.Component {
 
 
     render() {
-        this.playSound = (event) => {
-            console.log(event)
-            // let snd = document.getElementById(event.key.toUpperCase())
-            //         snd.play();
-            //         snd.currentTime = 0;
-        }
 
         return (
             <div id='display'>
