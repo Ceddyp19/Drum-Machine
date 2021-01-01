@@ -4,7 +4,10 @@ class DrumPad extends React.Component {
     state = {  }
 
     playSound = (id) => {
-       console.log(id)
+        let sound = document.getElementById(id)
+        console.log(sound)
+       sound.play();
+       sound.currentTime=0;
     }
 
     render() { 
@@ -12,10 +15,11 @@ class DrumPad extends React.Component {
             <div className='drum-pad' id={this.props.id}>
                 <button onClick={() => this.playSound(this.props.audioId)}>
                 {this.props.text}
-                <audio src="" id={this.props.audioId} className="clip"/>
+                <audio src={this.props.audio} id={this.props.audioId} className="clip"/>
                 </button>
             </div> );
     }
 }
  
 export default DrumPad;
+
