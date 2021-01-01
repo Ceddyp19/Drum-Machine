@@ -4,8 +4,8 @@ class DrumPad extends React.Component {
     state = {  }
     render() { 
         return ( 
-            <div className='drum-pad'>
-               drum pad
+            <div className='drum-pad' id={this.props.id}>
+                {this.props.text}
             </div> );
     }
 }
