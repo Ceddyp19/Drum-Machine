@@ -8,6 +8,7 @@ class DrumPad extends React.Component {
         let sound = document.getElementById(id)
         sound.play();
         sound.currentTime = 0;
+        // this.props.toggleDescText
     }
 
     render() {
