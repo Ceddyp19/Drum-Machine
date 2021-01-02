@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { text: 'Ced\'s Drum Machine' }
+    this.state = { text: '' }
   }
 
   componentDidMount() {
@@ -44,7 +44,6 @@ class App extends React.Component {
 export default App;
 
 function playSound(key) {
-  console.log('it works!')
   //use the key arg to find matching element via its id
   let snd = document.getElementById(key)
   //plays sound
