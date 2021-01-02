@@ -8,9 +8,12 @@ function playSound(key) {
     snd.play();
     //resets sound after it is played
     snd.currentTime = 0;
+    let dPad = snd.parentNode.parentNode
+    document.querySelector('#display p').innerText = dPad.id
+    // console.log(button.id)
 }
 
-class Display extends React.Component {
+class PadBank extends React.Component {
     state = {}
 
     componentDidMount() {
@@ -36,7 +39,7 @@ class Display extends React.Component {
     render() {
 
         return (
-            <div id='display'>
+            <div id='pad-bank'>
                 <p>Drum Machine</p>
                 <DrumPad id='heater1' text='Q' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" audioId='Q' toggleDescText={this.toggleDescText}/>
                 <DrumPad id='heater2' text='W' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" audioId='W' toggleDescText={this.toggleDescText}/>
@@ -52,4 +55,4 @@ class Display extends React.Component {
     }
 }
 
-export default Display
+export default PadBank

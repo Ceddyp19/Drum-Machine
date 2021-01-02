@@ -1,10 +1,10 @@
 import './App.css';
-import Display from './Display'
+import PadBank from './PadBank'
 
 function App() {
   return (
     <div className="App" id="drum-machine">
-      <Display />
+      <PadBank />
     </div>
   );
 }
