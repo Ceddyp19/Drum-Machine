@@ -9,7 +9,7 @@ function playSound(key) {
     //resets sound after it is played
     snd.currentTime = 0;
     let dPad = snd.parentNode.parentNode
-    document.querySelector('#display p').innerText = dPad.id
+    // document.querySelector('#display p').innerText = dPad.id
     // console.log(button.id)
 }
 
@@ -31,27 +31,23 @@ class PadBank extends React.Component {
         })
     }
 
-    toggleDescText = (text) =>{
-        document.querySelector('#display p').innerText = text
-    }
+    // toggleDescText = (text) =>{
+    //     document.querySelector('#display p').innerText = text
+    // }
 
-    sup = () =>{ console.log('sup')}
     render() {
-
         return (
             <div id='pad-bank'>
-                <p>Drum Machine</p>
-                <DrumPad id='heater1' text='Q' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" audioId='Q' toggleDescText={this.toggleDescText}/>
-                <DrumPad id='heater2' text='W' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" audioId='W' toggleDescText={this.toggleDescText}/>
-                <DrumPad id='heater3' text='E' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" audioId='E' toggleDescText={this.toggleDescText}/>
-                <DrumPad id='heater4' text='A' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" audioId='A' toggleDescText={this.toggleDescText}/>
-                <DrumPad id='clap' text='S' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" audioId='S' toggleDescText={this.toggleDescText}/>
-                <DrumPad id='open-hh' text='D' audio="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" audioId='D' toggleDescText={this.toggleDescText}/>
-                <DrumPad id='kick-n-hat' text='Z' audio="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" audioId='Z' toggleDescText={this.toggleDescText}/>
-                <DrumPad id='kick' text='X' audio="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" audioId='X' toggleDescText={this.toggleDescText}/>
-                <DrumPad id='closed-hh' text='C' audio="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" audioId='C' toggleDescText={this.toggleDescText}/>
+                <DrumPad id='heater1' text='Q' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" audioId='Q' toggleDescText={this.props.toggleDescText}/>
+                <DrumPad id='heater2' text='W' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" audioId='W' toggleDescText={this.props.toggleDescText}/>
+                <DrumPad id='heater3' text='E' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" audioId='E' toggleDescText={this.props.toggleDescText}/>
+                <DrumPad id='heater4' text='A' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" audioId='A' toggleDescText={this.props.toggleDescText}/>
+                <DrumPad id='clap' text='S' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" audioId='S' toggleDescText={this.props.toggleDescText}/>
+                <DrumPad id='open-hh' text='D' audio="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" audioId='D' toggleDescText={this.props.toggleDescText}/>
+                <DrumPad id='kick-n-hat' text='Z' audio="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" audioId='Z' toggleDescText={this.props.toggleDescText}/>
+                <DrumPad id='kick' text='X' audio="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" audioId='X' toggleDescText={this.props.toggleDescText}/>
+                <DrumPad id='closed-hh' text='C' audio="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" audioId='C' toggleDescText={this.props.toggleDescText}/>
             </div>);
-
     }
 }
 
