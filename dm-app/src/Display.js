@@ -28,9 +28,8 @@ class Display extends React.Component {
         })
     }
 
-    toggleDescText = () =>{
-        console.log('hi')
-        // document.getAnimations('display').innerText = text
+    toggleDescText = (text) =>{
+        document.querySelector('#display p').innerText = text
     }
 
     sup = () =>{ console.log('sup')}

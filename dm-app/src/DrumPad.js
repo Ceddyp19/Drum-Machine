@@ -4,11 +4,11 @@ class DrumPad extends React.Component {
     state = {}
 
 
-    playSound = (id) => {
-        let sound = document.getElementById(id)
+    playSound = (audioId) => {
+        let sound = document.getElementById(audioId)
         sound.play();
         sound.currentTime = 0;
-        // this.props.toggleDescText
+        this.props.toggleDescText(this.props.id)
     }
 
     render() {
