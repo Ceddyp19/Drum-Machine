@@ -1,4 +1,3 @@
-import React from 'react';
 import DrumPad from './DrumPad'
 
 function PadBank (props) {
