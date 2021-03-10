@@ -1,6 +1,6 @@
 import './App.css';
 import PadBank from './PadBank'
-import Display from './Display'
+import Controls from './Controls'
 import React from 'react';
 
 class App extends React.Component {
@@ -33,9 +33,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" id="drum-machine">
-        <h1>Ced's Drum Machine</h1>
-        <Display text={this.state.text} />
+        <h1>Drum Machine</h1>
         <PadBank toggleDescText={this.toggleDescText} />
+        {/* <div className='title'>Drum Machine</div> */}
+        <Controls text={this.state.text} />
       </div>
     );
   }

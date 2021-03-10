@@ -2,7 +2,7 @@ import DrumPad from './DrumPad'
 
 function PadBank (props) {
         return (
-            <div id='pad-bank'>
+            <div className='pad-bank'>
                 <DrumPad id='heater1' text='Q' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" audioId='Q' toggleDescText={props.toggleDescText}/>
                 <DrumPad id='heater2' text='W' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" audioId='W' toggleDescText={props.toggleDescText}/>
                 <DrumPad id='heater3' text='E' audio="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" audioId='E' toggleDescText={props.toggleDescText}/>
